@@ -43,6 +43,7 @@ class LoginScreen extends StatelessWidget {
               //     ),
               //   ),
               // ),
+              //google
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: OutlinedButton(
@@ -74,6 +75,48 @@ class LoginScreen extends StatelessWidget {
                         ),
                         const Text(
                           'Continue with Google',
+                          style: TextStyle(
+                            color: Pallete.whiteColor,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              //facebook button
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.0),
+                    ),
+                    side: const BorderSide(width: 2, color: Colors.white12),
+                  ),
+                  onPressed: () {},
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30,
+                      vertical: 20,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/svgs/f_logo.svg',
+                          width: 20,
+                          colorFilter: const ColorFilter.mode(
+                            Pallete.whiteColor,
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text(
+                          'Continue with Facebook',
                           style: TextStyle(
                             color: Pallete.whiteColor,
                             fontSize: 16.0,
