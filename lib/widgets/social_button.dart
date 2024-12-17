@@ -20,7 +20,7 @@ class SocialButton extends StatelessWidget {
   Widget build(BuildContext context) {
     //use TextButton.icon
     return TextButton.icon(
-      onPressed: () {},
+      onPressed: onPressed,
       // style: ButtonStyle(
       //   shape: RoundedRectangleBorder(
       //     borderRadius: BorderRadius.circular(8.0),

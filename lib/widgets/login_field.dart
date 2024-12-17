@@ -13,7 +13,7 @@ class LoginField extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: const BoxConstraints(
-        maxWidth: 400,
+        maxWidth: 500,
       ),
       child: TextField(
         decoration: InputDecoration(
