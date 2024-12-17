@@ -6,10 +6,12 @@ import '../pallets.dart';
 class SocialButton extends StatelessWidget {
   final String iconPath;
   final String label;
+  final double horizontalPadding;
   const SocialButton({
     super.key,
     required this.iconPath,
     required this.label,
+    required this.horizontalPadding,
   });
 
   @override
@@ -17,24 +19,47 @@ class SocialButton extends StatelessWidget {
     //use TextButton.icon
     return TextButton.icon(
       onPressed: () {},
-      style: ButtonStyle(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0),
-        ),
-        side: const BorderSide(width: 2, color: Colors.white12),
-      ),
+      // style: ButtonStyle(
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.circular(8.0),
+      //   ),
+      //   side: const BorderSide(width: 2, color: Colors.white12),
+      // ),
       icon: SvgPicture.asset(
         iconPath,
         width: 25,
+        colorFilter: const ColorFilter.mode(
+          Pallete.whiteColor,
+          BlendMode.srcIn,
+        ),
       ),
-      label: Text(label),
+      label: Text(
+        label,
+        style: const TextStyle(
+          fontSize: 17,
+          color: Pallete.whiteColor,
+        ),
+      ),
+      style: TextButton.styleFrom(
+        padding: EdgeInsets.symmetric(
+          vertical: 30,
+          horizontal: horizontalPadding,
+        ),
+        shape: RoundedRectangleBorder(
+          side: const BorderSide(
+            color: Pallete.borderColor,
+            width: 3,
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
     );
     // return OutlinedButton(
     //   style: OutlinedButton.styleFrom(
     //     shape: RoundedRectangleBorder(
     //       borderRadius: BorderRadius.circular(8.0),
     //     ),
-    //     side: const BorderSide(width: 2, color: Colors.white12),
+    //     side: const BorderSide(width: 2, color: Pallete.borderColor,),
     //   ),
     //   onPressed: () {},
     //   child: Padding(

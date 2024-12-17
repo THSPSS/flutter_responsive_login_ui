@@ -43,15 +43,19 @@ class LoginScreen extends StatelessWidget {
                       ),
                       //google button
                       const SocialButton(
-                          iconPath: 'assets/svgs/g_logo.svg',
-                          label: 'Continue with Google'),
+                        iconPath: 'assets/svgs/g_logo.svg',
+                        label: 'Continue with Google',
+                        horizontalPadding: 100,
+                      ),
                       const SizedBox(
                         height: 15,
                       ),
                       //facebook button
                       const SocialButton(
-                          iconPath: 'assets/svgs/f_logo.svg',
-                          label: 'Continue with Facebook'),
+                        iconPath: 'assets/svgs/f_logo.svg',
+                        label: 'Continue with Facebook',
+                        horizontalPadding: 90,
+                      ),
                       const SizedBox(
                         height: 10,
                       ),
